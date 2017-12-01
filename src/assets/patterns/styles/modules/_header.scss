@@ -14,7 +14,7 @@
     padding-bottom: 1em;
     padding-left: 15px;
     padding-right: 15px;
-    @include media(desktop) {
+    @include media($site-width) {
         padding-left: 0;
         padding-right: 0;
     }
@@ -47,11 +47,14 @@
     .site-search {
         position: relative;
         .form-control {
-            width: calc(100% - 100px);
+            width: calc(100% - 35px);
             border-width: 1px;
             border-color: $border-colour;
             font-size: 16px;
             height: 36px;
+            @include media(desktop) {
+                width: calc(100% - 100px);
+            }
         }
         .button {
             position: absolute;
