@@ -1,0 +1,78 @@
+//-----------
+// Header
+//-----------
+
+#global-header {
+    background-color: $bathnes-white;
+}
+
+.header-wrapper {
+    position: relative;
+    max-width: $site-width;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media($site-width) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.header-global {
+    overflow: hidden;
+}
+
+.header-logo {
+    width: (321px/2.5);
+    height: auto;
+    img {
+        max-width: 100%;
+    }
+    @include media(desktop) {
+        width: (321px/2);
+        float: left;
+    }
+}
+
+.header-search {
+    margin-top: 1em;
+    @include media(desktop) {
+        float: right;
+        width: 50%;
+        text-align: right;
+        margin-top: 12px;
+    }
+    .site-search {
+        position: relative;
+        .form-control {
+            width: calc(100% - 35px);
+            border-width: 1px;
+            border-color: $border-colour;
+            font-size: 16px;
+            height: 36px;
+            @include media(desktop) {
+                width: calc(100% - 100px);
+            }
+        }
+        .button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-indent: -9999px;
+            background-image: url(../images/icon-search-2x.png);
+            background-repeat: no-repeat;
+            background-position: 55% 50%;
+            background-size: 52.5% 40%;
+            box-shadow: none;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+#global-header-bar {
+    background-color: $bathnes-primary;
+    height: 5px;
+}

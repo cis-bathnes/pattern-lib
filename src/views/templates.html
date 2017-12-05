@@ -1,0 +1,17 @@
+---
+title: Templates | BATHNES Digital Toolkit
+fabricator: true
+---
+
+<h1 class="heading-large" data-ui-toggle="labels">Templates</h1>
+<p data-ui-toggle="labels">Add description here</p>
+
+<ul>
+{{#each views.templates.items}}
+
+	<li>
+		<a href="templates/{{@key}}.html" class="ui-item-heading" target="_blank">{{name}}</a>
+	</li>
+
+{{/each}}
+</ul>

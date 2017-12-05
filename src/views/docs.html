@@ -1,0 +1,14 @@
+---
+fabricator: true
+---
+
+<h1 data-ui-toggle="labels">Docs</h1>
+
+{{#each docs}}
+
+	<div class="ui-item-group">
+		<h2 id="{{@key}}"><a href="#{{@key}}">{{name}}</a></h2>
+		{{{content}}}
+	</div>
+
+{{/each}}
