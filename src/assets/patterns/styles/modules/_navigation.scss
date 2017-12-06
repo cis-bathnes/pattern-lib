@@ -3,6 +3,7 @@
 //-----------
 
 .navigation-primary {
+    position: relative;
     overflow: hidden;
     body.js-enabled & {
         transition: max-height ease-out 0.35s;
