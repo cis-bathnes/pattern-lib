@@ -4,7 +4,7 @@
 	padding-bottom: 3em;
 	border-bottom: 1px solid color(light);
 
-	&#colours {
+	&#colours, &#logos {
 		.ui-icon--code {
 			display: none;
 		}
@@ -40,6 +40,11 @@
 			padding-bottom: 0;
 		}
 	}
+}
+
+.ui-item-group__reverse {
+	background-color: color(dark);
+	padding: 1em;
 }
 
 .ui-item-code {
