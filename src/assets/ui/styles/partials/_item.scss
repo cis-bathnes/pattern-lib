@@ -126,8 +126,12 @@
 	ul {
 		list-style: disc;
 		margin-left: 1em;
+		margin-bottom: 1em;
 		li {
 			margin-bottom: 0.25em;
 		}
+	}
+	strong {
+		font-weight: 700;
 	}
 }
