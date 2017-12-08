@@ -1,11 +1,10 @@
-@import '../govuk_frontend_toolkit/stylesheets/colours';
-
 // Brand colours
 $bathnes-primary: #00aeef;
 $bathnes-primary-ally: #00728F;
 $bathnes-secondary: #00b259;
 $bathnes-secondary-ally: #00663D;
-$mainstream-brand: black;
+$mainstream-brand: $bathnes-primary;
+
 
 // Standard palette, colours
 $bathnes-purple: #5261AC;

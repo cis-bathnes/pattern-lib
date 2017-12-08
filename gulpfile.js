@@ -8,6 +8,7 @@ const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
 const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
+const rmLines = require('gulp-rm-lines');
 const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
@@ -28,6 +29,10 @@ const config = {
       src: 'src/assets/patterns/styles/screen.scss',
       dest: 'dist/assets/patterns/styles',
       watch: 'src/assets/patterns/styles/**/*.scss',
+    },
+    duplicates: {
+      src: 'govuk_frontend_toolkit/stylesheets/design-patterns/**/*',
+      dest: 'src/assets/patterns/styles/design-patterns',
     },
   },
   scripts: {
@@ -73,6 +78,17 @@ gulp.task('styles:ui', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
+// duplicate the required files, stripping imports
+gulp.task('styles:duplicates', () => {
+  return gulp.src(config.styles.duplicates.src)
+  .pipe(rmLines({
+      'filters': [
+        /^@import/,
+      ]
+    }))
+  .pipe(gulp.dest(config.styles.duplicates.dest));
+});
+
 gulp.task('styles:patterns', () => {
   gulp.src(config.styles.patterns.src)
   .pipe(gulpif(config.dev, sourcemaps.init()))
@@ -88,8 +104,13 @@ gulp.task('styles:patterns', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
-gulp.task('styles', ['styles:ui', 'styles:patterns']);
-
+gulp.task('styles', () => {
+  runSequence(
+    'styles:ui',
+    'styles:duplicates',
+    'styles:patterns'
+  );
+});
 
 // scripts
 const webpackConfig = require('./webpack.config')(config);
