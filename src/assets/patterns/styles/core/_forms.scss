@@ -1,0 +1,10 @@
+//-----------
+// Form
+//-----------
+
+
+.form-group, .form-group-related {
+    input + input {
+        margin-top: 10px;
+    }
+}

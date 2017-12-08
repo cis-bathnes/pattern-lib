@@ -3,6 +3,7 @@
 //-----------
 @import 'core/colours';
 @import 'core/accessibility';
+@import 'core/forms';
 @import 'design-patterns/alpha-beta';
 @import 'design-patterns/breadcrumbs';
 @import 'design-patterns/buttons';
@@ -42,4 +43,5 @@ $path:'../images/';
 @import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/sections';
+@import 'modules/footer';
 @import 'modules/footer';
