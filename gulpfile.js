@@ -44,7 +44,7 @@ const config = {
   },
   images: {
     patterns: {
-      src: ['src/assets/patterns/images/**/*', 'src/favicon.ico'],
+      src: ['src/assets/patterns/images/**/*', 'src/favicon.ico', 'govuk_frontend_toolkit/images/**/*'],
       dest: 'dist/assets/patterns/images',
       watch: 'src/assets/patterns/images/**/*',
     },

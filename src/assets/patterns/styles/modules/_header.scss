@@ -12,6 +12,7 @@
     margin: 0 auto;
     padding-top: 1em;
     padding-bottom: 1em;
+    //padding-bottom: 2em;
     padding-left: 15px;
     padding-right: 15px;
     @include media($site-width) {
@@ -47,7 +48,8 @@
     .site-search {
         position: relative;
         .form-control {
-            width: calc(100% - 35px);
+            width: calc(100% - 80px);
+            //width: calc(100% - 35px);
             border-width: 1px;
             border-color: $border-colour;
             font-size: 16px;
@@ -59,7 +61,8 @@
         .button {
             position: absolute;
             top: 0;
-            right: 0;
+            right: 45px;
+            //right: 0;
             text-indent: -9999px;
             background-image: url(../images/icon-search-2x.png);
             background-repeat: no-repeat;
@@ -68,11 +71,71 @@
             box-shadow: none;
             width: 36px;
             height: 36px;
+            @include media(desktop) {
+                right: 0;
+            }
         }
     }
 }
 
 #global-header-bar {
+    position: relative;
     background-color: $bathnes-primary;
     height: 5px;
+}
+
+.header-marque {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 0 25px;
+    border-color: transparent transparent transparent $bathnes-primary;
+    @include media(desktop) {
+        bottom: -50px;
+    }
+    @include media($site-width) {
+        right: 0;
+    }
+}
+
+// ----------
+// Commercial header
+// ----------
+
+.header-commercial {
+    position: relative;
+    overflow: hidden;
+    background-color: $bathnes-black;
+    .header-wrapper {
+        padding: 0.75em 0 0.5em 0;
+    }
+}
+
+.header-commercial__logo {
+    width: (320px/3.5);
+    height: auto;
+    display: block;
+    img {
+        max-width: 100%;
+    }
+    @include media(desktop) {
+        width: (320px/3);
+    }
+}
+
+.header-commercial__marque {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 0 30px;
+    border-color: transparent transparent transparent #fff;
+    @include media($site-width) {
+        right: 0;
+    }
 }

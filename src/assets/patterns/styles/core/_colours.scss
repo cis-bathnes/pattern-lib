@@ -1,9 +1,11 @@
+@import '../govuk_frontend_toolkit/stylesheets/colours';
+
 // Brand colours
 $bathnes-primary: #00aeef;
 $bathnes-primary-ally: #00728F;
 $bathnes-secondary: #00b259;
 $bathnes-secondary-ally: #00663D;
-$mainstream-brand: $bathnes-primary;
+$mainstream-brand: black;
 
 // Standard palette, colours
 $bathnes-purple: #5261AC;
@@ -21,7 +23,7 @@ $bathnes-white: #fff;
 // Gov UK overrides where they didn't use their own variables
 $white: $bathnes-white;
 $black: $bathnes-black;
-$govuk_blue: $bathnes-secondary-ally;
+$govuk-blue: $bathnes-secondary-ally;
 $turquoise: $bathnes-primary-ally;
 
 // Semantic colour names
@@ -77,7 +79,8 @@ $error-background: #fef7f7;       // Error background colour
 	('button-colour', $button-colour),
     ('button-hover-colour', $button-hover-colour),
 	('focus-colour', $focus-colour),
-	('error-colour', $error-colour)
+	('error-colour', $error-colour),
+	('mainstream-brand', $mainstream-brand)
 {
 	.swatch-#{$name} {
 		background-color: $color;
