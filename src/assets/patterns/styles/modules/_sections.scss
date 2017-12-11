@@ -22,3 +22,10 @@
     @extend .bold;
     margin-bottom: 1em;
 }
+
+.section-progress {
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    color: $secondary-text-colour;
+}
