@@ -17,6 +17,7 @@ const webpack = require('webpack');
 // configuration
 const config = {
   dev: gutil.env.dev,
+  serve: false,
   styles: {
     browsers: 'last 1 version',
     ui: {
@@ -70,7 +71,7 @@ gulp.task('styles:ui', () => {
   .pipe(rename('ui.css'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.styles.ui.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+  .pipe(gulpif(config.serve, reload({ stream: true })));
 });
 
 gulp.task('styles:patterns', () => {
@@ -85,7 +86,7 @@ gulp.task('styles:patterns', () => {
   .pipe(gulpif(!config.dev, csso()))
   .pipe(gulpif(config.dev, sourcemaps.write()))
   .pipe(gulp.dest(config.styles.patterns.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+  .pipe(gulpif(config.serve, reload({ stream: true })));
 });
 
 gulp.task('styles', ['styles:ui', 'styles:patterns']);
@@ -172,7 +173,7 @@ gulp.task('default', ['clean'], () => {
 
   // run build
   runSequence(tasks, () => {
-    if (config.dev) {
+    if (config.serve) {
       gulp.start('serve');
     }
   });
