@@ -18,7 +18,7 @@ const webpack = require('webpack');
 // configuration
 const config = {
   dev: gutil.env.dev,
-  serve: false,
+  serve: true,
   styles: {
     browsers: 'last 1 version',
     ui: {
