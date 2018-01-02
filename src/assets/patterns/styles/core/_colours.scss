@@ -28,7 +28,7 @@ $turquoise: $bathnes-primary-ally;
 // Semantic colour names
 $link-colour: $bathnes-primary-ally;
 $link-active-colour: $bathnes-purple;
-$link-hover-colour: darken($bathnes-primary-ally, 5%);
+$link-hover-colour: lighten($bathnes-primary-ally, 10%);
 $link-visited-colour: $bathnes-purple;
 $button-colour: $bathnes-secondary-ally;
 $button-hover-colour: darken($bathnes-secondary-ally, 5%);
