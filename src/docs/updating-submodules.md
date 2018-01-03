@@ -18,10 +18,10 @@ The 'git submodule update' command actually tells Git that you want your submodu
 So in summary:
 
 `git submodule add ssh://bla submodule_dir`
+
 `git submodule init`
 
-time passes, submodule upstream is updated
-and you now want to update
+time passes, submodule upstream is updated and you now want to update
 
 change to the submodule directory
 `cd submodule_dir`

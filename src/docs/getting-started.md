@@ -18,6 +18,6 @@ Source: <https://github.com/alphagov/govuk_frontend_toolkit#using-git-submodules
 
 ### Starting the toolkit
 
-In terminal, in the root:
+To work on the toolkit or view it locally. Open terminal, in the root folder run:
 
 `npm start`
