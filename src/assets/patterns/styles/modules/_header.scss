@@ -38,12 +38,15 @@
 }
 
 .header-search {
-    margin-top: 1em;
+    margin-top: 10px;
+    margin-bottom: 20px;
     @include media(desktop) {
+      margin-top: 1em;
         float: right;
         width: 50%;
         text-align: right;
         margin-top: 12px;
+        margin-bottom: 0;
     }
     .site-search {
         position: relative;

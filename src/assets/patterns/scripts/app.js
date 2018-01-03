@@ -9,9 +9,8 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery is available');
 }
 
-// For some reason Webpack is commenting the imports out.
-import 'menu.js';
+// For some reason imports are choking
 
-import '../../../../govuk_elements/assets/javascripts/application';
+// import 'menu.js';
 
-
+// import '../../../../govuk_elements/assets/javascripts/application';

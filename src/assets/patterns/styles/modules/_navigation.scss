@@ -9,9 +9,9 @@
       transition: max-height ease-out 0.35s;
 		  max-height: 0;
     }
+    border-top: 5px solid #fff;
     &--active {
-      // border-top: 1px solid $border-colour;
-      padding-bottom: 20px;
+      border-top: 5px solid $bathnes-primary;
   		body.js-enabled & {
   			transition: max-height ease-out 0.5s;
   			max-height: 1000px;
@@ -68,8 +68,15 @@
     right: 15px;
     text-decoration: none;
     color: $text-colour;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
     &:hover, &:active {
-        text-decoration: underline;
+        background-color: #eee;
     }
     &:after {
         display: inline-block;
