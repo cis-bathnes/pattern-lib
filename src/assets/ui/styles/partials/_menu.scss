@@ -14,8 +14,15 @@
 	-webkit-overflow-scrolling: touch;
 	border-right: 1px solid color(light);
 
+	@media (min-width: 60em) {
+		transform: translate(0, 0);
+	}
+
 	.ui-menu-active & {
 		transform: translate(0, 0);
+		@media (min-width: 60em) {
+			transform: translate(-$menu-width, 0);
+		}
 	}
 
 	ul {
