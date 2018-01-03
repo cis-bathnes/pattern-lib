@@ -2,7 +2,27 @@
 notes: |
   - Used for presenting template examples in this toolkit
 ---
+<!-- Menu show/hide JS -->
+<!-- Need to move into menu.js and that file be imported into app.js -->
+<script>
+  function showHideMenu(){
+  var element = document.getElementById("navigation-primary");
 
+  if (element.classList) {
+      element.classList.toggle("navigation-primary--active");
+  } else {
+      // For IE9
+      var classes = element.className.split(" ");
+      var i = classes.indexOf("navigation-primary--active");
+
+      if (i >= 0)
+          classes.splice(i, 1);
+      else
+          classes.push("navigation-primary--active");
+          element.className = classes.join(" ");
+  }
+}
+</script>
 <header role="banner" id="global-header">
     <div class="header-wrapper">
         <div class="header-global">
@@ -11,7 +31,7 @@ notes: |
                     <img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset Council" />
                 </a>
             </div>
-            <div class="header-search">
+            <div class="header-search header-search--desktop">
                 <form id="search" class="site-search" action="" method="">
                     <label class="form-label visually-hidden" for="search-site">Search across the site</label>
                     <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
@@ -19,15 +39,23 @@ notes: |
                 </form>
             </div>
         </div>
-        <a href="#" class="js-header-toggle navigation-trigger">Menu</a>
-        <div class="header-marque"></div>
+        <button id="js-header-toggle" class="navigation-trigger" onclick="showHideMenu()">Menu</button>
     </div>
     <nav role="navigation" id="navigation-primary" class="navigation-primary">
         <ul class="navigation-primary-list">
             <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
             <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+            <li class="navigation-primary-list__search">
+                <div class="header-search header-search--mobile">
+                  <form id="search" class="site-search" action="" method="">
+                      <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+                      <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+                      <input class="button" type="submit" value="Search">
+                  </form>
+                </div>
+            </li>
         </ul>
-
     </nav>
+    <div class="header-marque"></div>
 </header>
 <div id="global-header-bar"></div>

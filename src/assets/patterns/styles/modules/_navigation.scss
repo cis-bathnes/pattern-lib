@@ -6,16 +6,17 @@
     position: relative;
     overflow: hidden;
     body.js-enabled & {
-        transition: max-height ease-out 0.35s;
-		max-height: 0;
-	}
+      transition: max-height ease-out 0.35s;
+		  max-height: 0;
+    }
     &--active {
-        border-top: 1px solid $border-colour;
-		body.js-enabled & {
-			transition: max-height ease-out 0.5s;
-			max-height: 1000px;
-		}
-	}
+      // border-top: 1px solid $border-colour;
+      padding-bottom: 20px;
+  		body.js-enabled & {
+  			transition: max-height ease-out 0.5s;
+  			max-height: 1000px;
+  		}
+  	}
     @include media(desktop) {
         display: block;
         border-top: 1px solid $border-colour;

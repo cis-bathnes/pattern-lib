@@ -4,6 +4,7 @@
 
 #global-header {
     background-color: $bathnes-white;
+    position: relative;
 }
 
 .header-wrapper {
@@ -12,7 +13,6 @@
     margin: 0 auto;
     padding-top: 1em;
     padding-bottom: 1em;
-    //padding-bottom: 2em;
     padding-left: 15px;
     padding-right: 15px;
     @include media($site-width) {
@@ -76,6 +76,19 @@
             }
         }
     }
+}
+
+.header-search--desktop{
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.header-search--mobile{
+  @include media(desktop) {
+    display: none;
+  }
 }
 
 #global-header-bar {
