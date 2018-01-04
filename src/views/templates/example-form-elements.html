@@ -44,17 +44,6 @@
             There should be 10px under the label or legend and the input (when hint text is shown)
           </p>
 
-          <!-- Hint text inside a label -->
-          <div class="form-group">
-            <label class="form-label-bold" for="example-form-label-bold">
-              This is the label text in bold
-              <span class="form-hint">
-                This is hint text
-              </span>
-            </label>
-            <input class="form-control" id="example-form-label-bold" type="text">
-          </div>
-
           <!-- Hint text outside a label (preference is inside, to be read by AT) -->
           <div class="form-group">
             <label class="form-label-bold" for="example-form-label-bold">
@@ -63,7 +52,7 @@
             <span class="form-hint">
               This is hint text
             </span>
-            <input class="form-control" id="example-form-label-bold" type="text">
+            <input class="form-control" id="example-form-label-bold" type="text" aria-describedby="form-hint">
           </div>
 
           <!-- Text inside a legend -->
@@ -114,20 +103,6 @@
             There should be 10px under the label or legend and the input (when an error message is shown) and 15px above the error message.
           </p>
 
-          <!-- Text inside a label - error -->
-          <div class="form-group form-group-error">
-            <label class="form-label-bold" for="example-form-control">
-              This is the label text
-              <span class="form-hint">
-                This is hint text
-              </span>
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <input class="form-control form-control-error" id="example-form-control" type="text">
-          </div>
-
           <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="example-form-control">
@@ -139,7 +114,7 @@
             <span class="error-message">
               Error message goes here
             </span>
-            <input class="form-control form-control-error" id="example-form-control" type="text">
+            <input class="form-control form-control-error" id="example-form-control" type="text" aria-describedby="form-hint error-message">
           </div>
 
           <!-- Text inside a legend - error -->
@@ -314,11 +289,11 @@
           <div class="form-group form-group-error">
             <label class="form-label" for="input-text-b">
               This is the label text
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <input class="form-control form-control-error" id="input-text-b" type="text">
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-b" type="text" aria-describedby="error-message">
           </div>
 
           <!-- Input type="text" (bold label) -->
@@ -333,24 +308,14 @@
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="input-text-d">
               This is the label text in bold
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <input class="form-control form-control-error" id="input-text-d" type="text">
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-d" type="text" aria-describedby="error-message">
           </div>
 
           <!-- Input type="text" (bold label with hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="input-text-g">
-              This is the label text
-              <span class="form-hint">
-                This is hint text
-              </span>
-            </label>
-            <input class="form-control" id="input-text-g" type="text">
-          </div>
-
           <div class="form-group">
             <label class="form-label-bold" for="input-text-g">
               This is the label text
@@ -358,21 +323,21 @@
             <span class="form-hint">
               This is hint text
             </span>
-            <input class="form-control" id="input-text-g" type="text">
+            <input class="form-control" id="input-text-g" type="text" aria-describedby="form-hint">
           </div>
 
           <!-- Input type="text" - error (bold label with hint text) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="input-text-h">
               This is the label text
-              <span class="form-hint">
-                This is hint text
-              </span>
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <input class="form-control form-control-error" id="input-text-h" type="text">
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-h" type="text" aria-describedby="form-hint error-message">
           </div>
         </div>
 
@@ -444,11 +409,11 @@
           <div class="form-group form-group-error">
             <label class="form-label" for="textarea-b">
               This is the label text
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <textarea class="form-control form-control-error" id="textarea-b" cols="30" rows="10"></textarea>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-b" cols="30" rows="10" aria-describedby="error-message"></textarea>
           </div>
 
           <!-- Textarea (bold label) -->
@@ -463,32 +428,32 @@
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="textarea-d">
               This is the label text in bold
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <textarea class="form-control form-control-error" id="textarea-d" cols="30" rows="10"></textarea>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-d" cols="30" rows="10" aria-describedby="error-message"></textarea>
           </div>
 
           <!-- Textarea (bold label, with hint text) -->
           <div class="form-group">
             <label class="form-label-bold" for="textarea-e">
               This is the label text
-              <span class="form-hint">This is hint text</span>
             </label>
-            <textarea class="form-control" id="textarea-e" cols="30" rows="10"></textarea>
+            <span class="form-hint">This is hint text</span>
+            <textarea class="form-control" id="textarea-e" cols="30" rows="10" aria-describedby="form-hint"></textarea>
           </div>
 
           <!-- Textarea - error (bold label, with hint text) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="textarea-f">
               This is the label text
-              <span class="form-hint">This is hint text</span>
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <textarea class="form-control form-control-error" id="textarea-f" cols="30" rows="10"></textarea>
+            <span class="form-hint">This is hint text</span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-f" cols="30" rows="10" aria-describedby="form-hint error-message"></textarea>
           </div>
         </div>
 
@@ -511,11 +476,11 @@
           <div class="form-group form-group-error">
             <label class="form-label" for="select-box-b">
               This is the label text
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <select class="form-control form-control-error" id="select-box-b">
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-b" aria-describedby="error-message">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -540,11 +505,11 @@
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-d">
               This is the label text
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <select class="form-control form-control-error" id="select-box-d">
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-d" aria-describedby="error-message">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -557,11 +522,11 @@
           <div class="form-group">
             <label class="form-label-bold" for="select-box-g">
               This is the label text
-              <span class="form-hint">
-                This the hint text
-              </span>
             </label>
-            <select class="form-control" id="select-box-g">
+            <span class="form-hint">
+              This the hint text
+            </span>
+            <select class="form-control" id="select-box-g" aria-describedby="form-hint">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -572,14 +537,14 @@
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-h">
               This is the label text
-              <span class="form-hint">
-                This is the hint text
-              </span>
-              <span class="error-message">
-                Error message goes here
-              </span>
             </label>
-            <select class="form-control form-control-error" id="select-box-h">
+            <span class="form-hint">
+              This is the hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-h" aria-describedby="form-hint error-message">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -601,11 +566,11 @@
           <div class="form-group form-group-error">
   <label class="form-label" for="file-input">
     Upload a file
-    <span class="error-message">
-      Error message goes here
-    </span>
   </label>
-  <input type="file" id="file-input">
+  <span class="error-message">
+    Error message goes here
+  </span>
+  <input type="file" id="file-input" aria-describedby="error-message">
 </div>
 
         </div>
@@ -867,11 +832,11 @@
         <div class="form-group form-group-error">
           <label class="form-label" for="example-paid-monthly-pay-2">
             Monthly take home pay (after tax)?
-            <span class="error-message">
-              Error message about monthly pay goes here
-            </span>
           </label>
-          <input class="form-control" name="example-paid-monthly-pay-2" type="text" id="example-paid-monthly-pay-2">
+          <span class="error-message">
+            Error message about monthly pay goes here
+          </span>
+          <input class="form-control" name="example-paid-monthly-pay-2" type="text" id="example-paid-monthly-pay-2" aria-describedby="error-message">
         </div>
       </div>
 

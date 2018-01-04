@@ -1,5 +1,5 @@
 //-----------
-// Header
+// Aside
 //-----------
 
 .aside-container {
@@ -7,7 +7,9 @@
 }
 
 .aside {
-    border-top: 5px solid $bathnes-secondary;
+    border-top: 3px solid $bathnes-secondary;
+    background-color: $bathnes-grey-4;
+    padding: 1em;
     h2 {
         font-weight: 700;
         margin-top: 0.3em;

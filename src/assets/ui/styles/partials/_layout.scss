@@ -33,12 +33,19 @@ body {
 	padding: 0 1em;
 	z-index: 0;
 	min-height: 100vh;
+	margin-left: 0;
+	transform: translate(0, 0);
+
+	@media (min-width: 60em) {
+		margin-left: $menu-width;
+		transform: translate(0, 0);
+	}
 
 	.ui-menu-active & {
 		transform: translate($menu-width, 0);
 
 		@media (min-width: 60em) {
-			margin-left: $menu-width;
+			margin-left: 0;
 			transform: translate(0, 0);
 		}
 	}

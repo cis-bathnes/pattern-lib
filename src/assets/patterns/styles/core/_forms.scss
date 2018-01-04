@@ -11,4 +11,10 @@
     input + input {
         margin-top: 10px;
     }
+    fieldset input {
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
