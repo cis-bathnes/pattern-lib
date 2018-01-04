@@ -1,4 +1,6 @@
 /**
  * Toolkit JavaScript
  */
-import "../../../../govuk_elements/assets/javascripts/application";
+
+// import '../../../../govuk_elements/assets/javascripts/application';
+// Requires jQuery
