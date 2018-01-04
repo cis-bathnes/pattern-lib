@@ -11,6 +11,4 @@ if (typeof jQuery === 'undefined') {
 
 // For some reason imports are choking
 
-// import 'menu.js';
-
 // import '../../../../govuk_elements/assets/javascripts/application';
