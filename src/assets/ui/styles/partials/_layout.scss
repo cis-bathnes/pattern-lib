@@ -38,6 +38,7 @@ body {
 
 	@media (min-width: 60em) {
 		margin-left: $menu-width;
+		transform: translate(0, 0);
 	}
 
 	.ui-menu-active & {
