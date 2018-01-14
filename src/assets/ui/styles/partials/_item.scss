@@ -4,7 +4,7 @@
 	padding-bottom: 3em;
 	border-bottom: 1px solid color(light);
 
-	&#colours {
+	&#colours, &#logos {
 		.ui-icon--code {
 			display: none;
 		}
@@ -42,6 +42,11 @@
 	}
 }
 
+.ui-item-group__reverse {
+	background-color: color(dark);
+	padding: 1em;
+}
+
 .ui-item-code {
 	margin-top: 1em;
 	border: 1px solid color(light);
@@ -69,7 +74,7 @@
 
 .ui-item-heading {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: .9275em;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
@@ -121,8 +126,12 @@
 	ul {
 		list-style: disc;
 		margin-left: 1em;
+		margin-bottom: 1em;
 		li {
 			margin-bottom: 0.25em;
 		}
+	}
+	strong {
+		font-weight: 700;
 	}
 }

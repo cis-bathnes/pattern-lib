@@ -8,6 +8,7 @@ const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
 const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
+const rmLines = require('gulp-rm-lines');
 const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
@@ -17,6 +18,7 @@ const webpack = require('webpack');
 // configuration
 const config = {
   dev: gutil.env.dev,
+  serve: true,
   styles: {
     browsers: 'last 1 version',
     ui: {
@@ -28,6 +30,10 @@ const config = {
       src: 'src/assets/patterns/styles/screen.scss',
       dest: 'dist/assets/patterns/styles',
       watch: 'src/assets/patterns/styles/**/*.scss',
+    },
+    duplicates: {
+      src: 'govuk_frontend_toolkit/stylesheets/design-patterns/**/*',
+      dest: 'src/assets/patterns/styles/design-patterns',
     },
   },
   scripts: {
@@ -44,7 +50,7 @@ const config = {
   },
   images: {
     patterns: {
-      src: ['src/assets/patterns/images/**/*', 'src/favicon.ico'],
+      src: ['src/assets/patterns/images/**/*', 'src/favicon.ico', 'govuk_frontend_toolkit/images/**/*'],
       dest: 'dist/assets/patterns/images',
       watch: 'src/assets/patterns/images/**/*',
     },
@@ -70,7 +76,18 @@ gulp.task('styles:ui', () => {
   .pipe(rename('ui.css'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.styles.ui.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+  .pipe(gulpif(config.serve, reload({ stream: true })));
+});
+
+// duplicate the required files, stripping imports
+gulp.task('styles:duplicates', () => {
+  return gulp.src(config.styles.duplicates.src)
+  .pipe(rmLines({
+      'filters': [
+        /^@import/,
+      ]
+    }))
+  .pipe(gulp.dest(config.styles.duplicates.dest));
 });
 
 gulp.task('styles:patterns', () => {
@@ -85,11 +102,16 @@ gulp.task('styles:patterns', () => {
   .pipe(gulpif(!config.dev, csso()))
   .pipe(gulpif(config.dev, sourcemaps.write()))
   .pipe(gulp.dest(config.styles.patterns.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+  .pipe(gulpif(config.serve, reload({ stream: true })));
 });
 
-gulp.task('styles', ['styles:ui', 'styles:patterns']);
-
+gulp.task('styles', () => {
+  runSequence(
+    'styles:ui',
+    'styles:duplicates',
+    'styles:patterns'
+  );
+});
 
 // scripts
 const webpackConfig = require('./webpack.config')(config);
@@ -172,7 +194,7 @@ gulp.task('default', ['clean'], () => {
 
   // run build
   runSequence(tasks, () => {
-    if (config.dev) {
+    if (config.serve) {
       gulp.start('serve');
     }
   });
