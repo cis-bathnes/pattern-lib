@@ -2,13 +2,22 @@
  * Toolkit JavaScript
  */
 
-// check jquery
-if (typeof jQuery === 'undefined') {
-  console.log('jQuery is NOT available');
-} else {
-  console.log('jQuery is available');
-}
+// Check jquery is available
+// if (typeof jQuery === 'undefined') {
+//   console.log('jQuery is NOT available');
+// } else {
+//   console.log('jQuery is available yay!!!');
+// }
 
-// For some reason imports are choking
+/** Using GovUK Frontend Toolkit
+ * We've imported what is required by the GovUK elements JS
+ * There's functionality and information here: https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/javascript.md
+*/
+import '../../../../govuk_frontend_toolkit/javascripts/govuk/show-hide-content.js';
+import '../../../../govuk_frontend_toolkit/javascripts/govuk/shim-links-with-button-role.js';
+import '../../../../govuk_frontend_toolkit/javascripts/govuk/details.polyfill.js';
 
-// import '../../../../govuk_elements/assets/javascripts/application';
+/** Include GovUK elements
+ * Dependant on the imported JS from the GovUK Frontend Toolkit above
+*/
+import '../../../../govuk_elements/assets/javascripts/application.js';
