@@ -9,9 +9,11 @@ Built upon the work of Gov.uk this toolkit uses the following two resources as a
 
 ## About
 
-Created by [fffunction](https://fffunction.co) in association with [PilotWorks](http://pilot.works).
+Created by [fffunction](https://fffunction.co/?utm_source=banes-toolkit&utm_campaign=referrals&utm_medium=link) in association with [PilotWorks](http://pilot.works).
 
-Built using Fabricator: <http://fbrctr.github.io/>
+Built upon Fabricator: <http://fbrctr.github.io/>
 
-[BATHNES Toolkit:](https://style.bathnes.gov.uk)
-[Fabricator docs:](http://fbrctr.github.io/docs)
+BATHNES Toolkit: <https://style.bathnes.gov.uk>  
+Fabricator docs: <http://fbrctr.github.io/docs>
+
+
