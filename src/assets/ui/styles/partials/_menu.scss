@@ -5,6 +5,7 @@
 	top: 0;
 	left: 0;
 	transform: translate(-$menu-width, 0);
+	-webkit-transform: translate(-$menu-width, 0);
 	width: $menu-width;
 	height: 100%;
 	z-index: 1;
@@ -16,12 +17,15 @@
 
 	@media (min-width: 60em) {
 		transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
 	}
 
 	.ui-menu-active & {
 		transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
 		@media (min-width: 60em) {
 			transform: translate(-$menu-width, 0);
+			-webkit-transform: translate(-$menu-width, 0);
 		}
 	}
 
