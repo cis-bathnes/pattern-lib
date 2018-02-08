@@ -40,7 +40,7 @@ function getLoaders() {
 
   const loaders = [{
     test: /(\.js)/,
-    exclude: /(node_modules)/,
+    exclude: /(node_modules|prism\.js)/,
     loaders: ['babel'],
   }, {
     test: /(\.jpg|\.png)$/,
