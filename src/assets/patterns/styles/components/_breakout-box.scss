@@ -1,7 +1,10 @@
 .breakout-box{
   background: $bathnes-grey-3;
-  padding: 30px;
+  padding: 15px;
   border: solid 2px $bathnes-grey-2;
+    @include media($site-width){
+    padding:30px;
+  }
 }
 
 .breakout-box-alt-primary{
