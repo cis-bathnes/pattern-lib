@@ -1,0 +1,17 @@
+.breakout-box{
+  background: $bathnes-grey-3;
+  padding: 30px;
+  border: solid 2px $bathnes-grey-2;
+}
+
+.breakout-box-alt-primary{
+  background: $bathnes-primary;
+  border: solid 2px $bathnes-primary;
+  color: $bathnes-white;
+}
+
+.breakout-box-alt-secondary{
+  background:$bathnes-secondary-ally;
+  border: solid 2px $bathnes-secondary-ally;
+  color: $bathnes-white;
+}
