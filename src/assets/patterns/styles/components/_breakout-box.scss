@@ -1,17 +1,22 @@
 .breakout-box{
   background: $bathnes-grey-3;
-  padding: 30px;
+  padding: 15px;
   border: solid 2px $bathnes-grey-2;
+  margin:20xp 0;
+    @include media($site-width){
+    padding:30px;
+    margin: 40px 0;
+  }
 }
 
 .breakout-box-alt-primary{
-  background: $bathnes-primary;
-  border: solid 2px $bathnes-primary;
+  background: $link-colour;
+  border: solid 2px $link-hover-colour;
   color: $bathnes-white;
 }
 
 .breakout-box-alt-secondary{
-  background:$bathnes-secondary-ally;
-  border: solid 2px $bathnes-secondary-ally;
+  background:$button-colour;
+  border: solid 2px $button-hover-colour;
   color: $bathnes-white;
 }
