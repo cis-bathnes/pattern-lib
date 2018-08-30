@@ -23,3 +23,9 @@ To work on the toolkit or view it locally. Open terminal, in the root folder run
 `npm start`
 
 Note - these instructions are from a Mac. We'll add instructions as to how to run this on PCs and VMs soon.
+
+### Minify CSS for production
+
+To minify the CSS for production environments you will need to rund the following gulp command
+
+gulp --production
